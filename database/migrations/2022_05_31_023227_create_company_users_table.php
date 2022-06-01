@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('client_users', function (Blueprint $table) {
+        Schema::create('company_users', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('client_id');
+            $table->unsignedBigInteger('company_id');
             $table->unsignedBigInteger('user_id');
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->string('position');
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('client_users');
+        Schema::dropIfExists('company_users');
     }
 };

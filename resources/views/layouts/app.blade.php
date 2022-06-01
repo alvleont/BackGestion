@@ -58,7 +58,7 @@
 	            </div>
 	            <ul class="nav">
                     <li>
-	                    <a href="../charts.html">
+	                    <a href="{{ route('users') }}">
 	                        <i class="ti-user"></i>
 	                        <p>Usuarios</p>
 	                    </a>

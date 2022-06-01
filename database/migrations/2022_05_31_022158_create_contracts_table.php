@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('contracts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('client_id');
+            $table->unsignedBigInteger('company_id');
             $table->unsignedBigInteger('responsible_id');
             $table->unsignedBigInteger('client_contact_id');
             $table->enum('status', ['pending', 'active', 'inactive'])->default('pending');

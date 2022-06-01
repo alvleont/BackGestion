@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,17 +49,18 @@ Route::middleware('cache.headers:public;max_age=31536000;etag')->group(function 
 
     Route::get('/actualidad', [Actualidad::class, 'index'])->name('actualidad');
     Route::get('/actualidad/{slug}', [Actualidad::class, 'post'])->name('post');
-
-    Route::get('/dashboard', [Dashboard::class, 'index'])->name('dashboard');
-    });
+});
 
     Route::middleware(['auth:sanctum', 'verified'])->group(function () {
-        Route::get('/dashboard', function () {
-            return view('dashboard');
-        })->name('dashboard');
+        Route::get('/dashboard', function () {return LivewireView('Dashboard','dashboard');})->name('dashboard');
+        Route::get('/users', function () {return LivewireView('Usuarios','dashboard');})->name('users');
 
 
     });
 
     require __DIR__.'/auth.php';
+
+    function LivewireView($title,$component){
+        return view('dashboard',compact(['title','component']));
+    }
 
