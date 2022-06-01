@@ -46,7 +46,7 @@
   <!-- Template Main CSS File -->
   <link href="/assets/css/style.css" rel="stylesheet">
 
-  @livewireStyles
+  <livewire:styles />
 
 
 
@@ -102,7 +102,7 @@
   <footer id="footer">
 
     <div class="footer-newsletter">
- @livewire('sitioweb.listadistribucion')
+        <livewire:web.listadistribucion />
     </div>
 
     <div class="footer-top">
@@ -177,7 +177,7 @@
 
   <!-- Template Main JS File -->
   <script src="/assets/js/main.js"></script>
-  @livewireScripts
+  <livewire:scripts />
 
 </body>
 

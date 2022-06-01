@@ -52,5 +52,13 @@ Route::middleware('cache.headers:public;max_age=31536000;etag')->group(function 
     Route::get('/dashboard', [Dashboard::class, 'index'])->name('dashboard');
     });
 
+    Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+        Route::get('/dashboard', function () {
+            return view('dashboard');
+        })->name('dashboard');
 
+
+    });
+
+    require __DIR__.'/auth.php';
 
