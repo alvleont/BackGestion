@@ -24,6 +24,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
     <link href="/portal_assets/css/themify-icons.css" rel="stylesheet">
+    @livewireStyles
 </head>
 
 <body>
@@ -31,7 +32,7 @@
 	    <div class="sidebar" data-background-color="white" data-active-color="danger">
 
 			<div class="logo">
-				<a href="{{ route('dashboard') }}" class="simple-text logo-mini m-0">
+				<a href="{{ route('dashboard') }}" class="m-0 simple-text logo-mini">
 					<img src="phesymbol.svg">
 				</a>
 
@@ -63,35 +64,41 @@
 	                        <p>Usuarios</p>
 	                    </a>
 	                </li>
+                    <li>
+	                    <a href="{{ route('companies') }}">
+	                        <i class="ti-briefcase"></i>
+	                        <p>Empresas</p>
+	                    </a>
+	                </li>
 
                     <li>
-	                    <a href="../charts.html">
+	                    <a href="{{ route('contracts') }}">
 	                        <i class="ti-book"></i>
-	                        <p>Mis Contratos</p>
+	                        <p>Contratos</p>
 	                    </a>
 	                </li>
                     <li>
-	                    <a href="../charts.html">
+	                    <a href="{{ route('meetings') }}">
 	                        <i class="ti-calendar"></i>
 	                        <p>Reuniones</p>
 	                    </a>
 	                </li>
                     <li>
-	                    <a href="../charts.html">
+	                    <a href="{{ route('support') }}">
 	                        <i class="ti-ticket"></i>
 	                        <p>Soporte</p>
 	                    </a>
 	                </li>
                     <li>
-	                    <a href="../charts.html">
+	                    <a href="{{ route('apps') }}">
 	                        <i class="ti-harddrives"></i>
-	                        <p>Mis Apps</p>
+	                        <p>Apps</p>
 	                    </a>
 	                </li>
                     <li>
-	                    <a href="../charts.html">
+	                    <a href="{{ route('finance') }}">
 	                        <i class="ti-money"></i>
-	                        <p>Mis Pagos</p>
+	                        <p>Financiero</p>
 	                    </a>
 	                </li>
 	    	</div>
@@ -158,7 +165,7 @@
 	            <div class="container-fluid">
 	                <div class="row">
 
-						<!-- your content here -->
+                        {{ $slot }}
 
 	                </div>
 	            </div>
@@ -166,25 +173,7 @@
 
 	        <footer class="footer">
 	            <div class="container-fluid">
-	                <nav class="pull-left">
-	                    <ul>
-	                        <li>
-	                            <a href="https://www.creative-tim.com">
-	                                Creative Tim
-	                            </a>
-	                        </li>
-	                        <li>
-	                            <a href="https://blog.creative-tim.com">
-	                               Blog
-	                            </a>
-	                        </li>
-	                        <li>
-	                            <a href="https://www.creative-tim.com/license">
-	                                Licenses
-	                            </a>
-	                        </li>
-	                    </ul>
-	                </nav>
+
 	                <div class="copyright pull-right">
 	                    &copy; <script>document.write(new Date().getFullYear())</script>, Pharmaceutical Experts SAS</a>
 	                </div>
@@ -253,6 +242,6 @@
 
 	<!-- Paper Dashboard PRO DEMO methods, don't include it in your project! -->
 	<script src="/portal_assets/js/demo.js"></script>
-
+    @livewireScripts
 </html>
 

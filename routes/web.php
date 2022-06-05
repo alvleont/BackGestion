@@ -53,7 +53,13 @@ Route::middleware('cache.headers:public;max_age=31536000;etag')->group(function 
 
     Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::get('/dashboard', function () {return LivewireView('Dashboard','dashboard');})->name('dashboard');
-        Route::get('/users', function () {return LivewireView('Usuarios','dashboard');})->name('users');
+        Route::get('/users', function () {return LivewireView('Usuarios','users-management');})->name('users');
+        Route::get('/contracts', function () {return LivewireView('Contratos','contracts-management');})->name('contracts');
+        Route::get('/tickets', function () {return LivewireView('Soporte','tickets-management');})->name('support');
+        Route::get('/apps', function () {return LivewireView('Apps','apps-management');})->name('apps');
+        Route::get('/finance', function () {return LivewireView('Financiero','finances-management');})->name('finance');
+        Route::get('/meetings', function () {return LivewireView('Reuniones','meetings-management');})->name('meetings');
+        Route::get('/companies', function () {return LivewireView('Empresas','companies-management');})->name('companies');
 
 
     });
