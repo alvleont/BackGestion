@@ -19,12 +19,9 @@ return new class extends Migration
             $table->unsignedBigInteger('responsible_id');
             $table->unsignedBigInteger('contract_id');
             $table->unsignedBigInteger('software_id')->nullable();
-            $table->boolean('is_exclusive')->default(false);
             $table->string('title');
             $table->text('description');
-            $table->unsignedInteger('estimated_hours');
-            $table->json('backlog')->nullable();
-            $table->json('sprint')->nullable();
+            $table->unsignedInteger('estimated_hours')->nullable();
             $table->enum('status',['created','assigned','in_progress','suspended','completed','canceled'])->default('created');
             $table->unsignedBigInteger('created_by');
             $table->dateTime('assigned_at')->nullable();
@@ -38,6 +35,7 @@ return new class extends Migration
             $table->unsignedBigInteger('completed_by')->nullable();
             $table->unsignedBigInteger('canceled_by')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

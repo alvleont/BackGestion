@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('logo_url');
             $table->string('url');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

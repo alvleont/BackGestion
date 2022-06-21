@@ -23,6 +23,7 @@ return new class extends Migration
             $table->boolean('is_client')->nullable();
             $table->boolean('is_provider')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
