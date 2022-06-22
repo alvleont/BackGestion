@@ -19438,9 +19438,12 @@ __webpack_require__.r(__webpack_exports__);
 /*!************************************!*\
   !*** ./resources/css/filament.css ***!
   \************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):\nSyntaxError\n\n(7:1) /Users/alvleont/Documents/GitHub/BackGestion/vendor/filament/filament/resources/css/app.css The `via-primary-400` class does not exist. If `via-primary-400` is a custom class, make sure it is defined within a `@layer` directive.\n\n \u001b[90m 5 | \u001b[39m\n \u001b[90m 6 | \u001b[39m\u001b[36m@tailwind\u001b[39m base\u001b[33m;\u001b[39m\n\u001b[1m\u001b[31m>\u001b[39m\u001b[22m\u001b[90m 7 | \u001b[39m\u001b[36m@tailwind\u001b[39m components\u001b[33m;\u001b[39m\n \u001b[90m   | \u001b[39m\u001b[1m\u001b[31m^\u001b[39m\u001b[22m\n \u001b[90m 8 | \u001b[39m\u001b[36m@tailwind\u001b[39m utilities\u001b[33m;\u001b[39m\n \u001b[90m 9 | \u001b[39m\n\n    at processResult (/Users/alvleont/Documents/GitHub/BackGestion/node_modules/webpack/lib/NormalModule.js:758:19)\n    at /Users/alvleont/Documents/GitHub/BackGestion/node_modules/webpack/lib/NormalModule.js:860:5\n    at /Users/alvleont/Documents/GitHub/BackGestion/node_modules/loader-runner/lib/LoaderRunner.js:400:11\n    at /Users/alvleont/Documents/GitHub/BackGestion/node_modules/loader-runner/lib/LoaderRunner.js:252:18\n    at context.callback (/Users/alvleont/Documents/GitHub/BackGestion/node_modules/loader-runner/lib/LoaderRunner.js:124:13)\n    at Object.loader (/Users/alvleont/Documents/GitHub/BackGestion/node_modules/postcss-loader/dist/index.js:140:7)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -19773,6 +19776,7 @@ process.umask = function() { return 0; };
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
+/******/ 			"css/filament": 0,
 /******/ 			"css/app": 0
 /******/ 		};
 /******/ 		
@@ -19823,9 +19827,9 @@ process.umask = function() { return 0; };
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.css")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/filament.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/filament","css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/filament","css/app"], () => (__webpack_require__("./resources/css/app.css")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/filament","css/app"], () => (__webpack_require__("./resources/css/filament.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

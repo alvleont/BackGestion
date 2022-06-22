@@ -25,4 +25,8 @@ class Company extends Model
         return $this->belongsToMany(User::class,'company_users')->withPivot('status', 'position');
     }
 
+    public function contracts(){
+        return $this->hasMany(Contract::class);
+    }
+
 }

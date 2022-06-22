@@ -1,5 +1,24 @@
-/** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors')
+
+const defaultColors  = require('tailwindcss/colors')
+
+const colors = {
+    ...defaultColors,
+    ...{
+        "phe": {
+            DEFAULT: '#C75155',
+            '50': '#F4DCDD',
+            '100': '#EFCCCE',
+            '200': '#E5AEAF',
+            '300': '#DB8F91',
+            '400': '#D17073',
+            '500': '#C75155',
+            '600': '#A9373A',
+            '700': '#7F292C',
+            '800': '#551B1D',
+            '900': '#2A0E0F'
+        },
+    },
+}
 
 module.exports = {
     content: [
@@ -10,9 +29,8 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-
-                danger: colors.rose,
-                primary: "#C75155",
+                danger: colors.red,
+                primary: colors.phe,
                 success: colors.green,
                 warning: colors.yellow,
             },
