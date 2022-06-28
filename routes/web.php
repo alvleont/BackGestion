@@ -13,6 +13,36 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware('cache.headers:public;max_age=31536000;etag')->group(function () {
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('home');
+
+    Route::get('/about', function () {
+        return view('about');
+    })->name('about');
+
+    Route::get('/services', function () {
+        return view('services');
+    })->name('services');
+
+    Route::get('/innovation', function () {
+        return view('services');
+    })->name('innovation');
+
+    Route::get('/digital-transformation', function () {
+        return view('services');
+    })->name('digital-transformation');
+
+    Route::get('/terms', function () {
+        return view('terms');
+    })->name('terms');
+
+    Route::get('/privacy', function () {
+        return view('welcome');
+    })->name('privacy');
+
+
+
+
 });

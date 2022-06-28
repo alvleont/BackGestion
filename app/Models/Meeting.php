@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Builder;
 
 class Meeting extends Model
 {
@@ -31,7 +32,10 @@ class Meeting extends Model
         return $this->belongsTo(User::class,'organizer_id');
     }
 
+    public function scopeIamin($query){
+        return $query->whereJsonContains('participants', ['participant_id'=>strval(auth()->user()->id)] );
 
+    }
     use HasFactory, SoftDeletes;
 
 
